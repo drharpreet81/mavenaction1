@@ -30,9 +30,11 @@ jobs:
 
       - name: Build with Maven
         run: mvn -B clean install
+ 	working-directory: my-app
 
       - name: Run Tests
         run: mvn test
+        working-directory: my-app
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
